@@ -1,0 +1,339 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  background-color: transparent;
+  height: 100vh;
+  background-image: url("../bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+    width: 100%;
+}
+nav {
+    height: 15vh;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
+    gap: 70px;
+    padding-bottom: 15px;
+}
+
+nav button {
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Courier New';
+    letter-spacing: 0px;
+    transition: 0.3s ease-out;
+    border-bottom: 2px solid transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    letter-spacing: 5px;
+    border-bottom: 2px solid white;
+}
+
+#content {
+    width: 40vw;
+    display: flex;
+    background-color: rgba(255,255,255,0.2);
+    padding: 200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 20px;
+    color: black;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.hero {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.about-section, .hours-section {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-section h2,
+.hours-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hours-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-container {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.menu-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.menu-container p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+}
+
+.menu-item h2 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
+    color: #ffd700;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu-item p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: black;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.about-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-container > p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Base styles stay mostly the same */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    height: auto; /* avoid fixed 100vh on mobile to prevent scroll issues */
+    padding: 20px 10px;
+  }
+
+  nav {
+    height: auto;
+    padding: 10px 10px 5px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  nav button {
+    font-size: 18px;
+  }
+
+  #content {
+    width: 90vw; /* almost full width */
+    padding: 30px 15px;
+  }
+
+  /* Home container */
+  .home-container {
+    padding: 30px 10px;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-section, .hours-section {
+    max-width: 100%;
+  }
+
+  .about-section h2,
+  .hours-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p,
+  .hours-section ul {
+    font-size: 1rem;
+  }
+
+  /* Menu container */
+  .menu-container {
+    padding: 30px 10px;
+    max-width: 100%;
+  }
+
+  .menu-container h1 {
+    font-size: 2rem;
+  }
+
+  .menu-container p {
+    font-size: 1rem;
+  }
+
+  .menu-section {
+    gap: 20px;
+  }
+
+  .menu-item {
+    padding: 15px;
+  }
+
+  .menu-item h2 {
+    font-size: 1.3rem;
+  }
+
+  .menu-item p {
+    font-size: 1rem;
+  }
+
+  .price {
+    top: 15px;
+    right: 15px;
+    font-size: 1rem;
+  }
+
+  /* About container */
+  .about-container {
+    padding: 30px 15px;
+    max-width: 100%;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-container > p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
